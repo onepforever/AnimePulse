@@ -1,7 +1,7 @@
 // animePulse.js
 
 // Replace with your actual Bing News Search API key
-const bingNewsApiKey = 'YOUR_API_KEY';
+const bingNewsApiKey = '8388305ec021421e9a7911e9c475133c';
 
 // GraphQL query for searching anime using the AniList API
 const SEARCH_ANIME_QUERY = `
