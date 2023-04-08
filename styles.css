@@ -73,3 +73,31 @@ h2 {
 .news-item a {
   text-decoration: none;
 }
+
+/* Additional CSS styles for the alternative search page */
+.search-container {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.search-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.search-description {
+  color: #777;
+}
+
+.search-input {
+  width: 60%;
+  max-width: 500px;
+}
+
+.search-button {
+  margin-top: 15px;
+}
+
+.search-results {
+  margin-top: 40px;
+}
