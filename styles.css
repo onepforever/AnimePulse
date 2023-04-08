@@ -101,3 +101,21 @@ h2 {
 .search-results {
   margin-top: 40px;
 }
+
+/* Existing styles */
+
+.results-container {
+  display: flex;
+}
+
+.anilist-search-results,
+.news-search-results {
+  flex: 1;
+  padding: 10px;
+}
+
+.search-result-item,
+.news-result-item {
+  margin-bottom: 20px;
+}
+
