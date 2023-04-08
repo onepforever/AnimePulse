@@ -102,20 +102,38 @@ h2 {
   margin-top: 40px;
 }
 
-/* Existing styles */
+.search-container {
+  margin-bottom: 20px;
+}
 
 .results-container {
   display: flex;
 }
 
-.anilist-search-results,
-.news-search-results {
+.results-section {
   flex: 1;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .search-result-item,
 .news-result-item {
   margin-bottom: 20px;
 }
+
+.search-result-item img,
+.news-result-item img {
+  max-width: 100%;
+}
+
+.search-result-item h3,
+.news-result-item h3 {
+  margin: 0;
+}
+
+.search-result-item p,
+.news-result-item p {
+  margin: 5px 0;
+}
+
 
