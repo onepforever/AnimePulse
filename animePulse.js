@@ -3,7 +3,6 @@
 // Replace with your actual Bing News Search API key
 const bingNewsApiKey = '8388305ec021421e9a7911e9c475133c';
 
-
 // GraphQL query for searching anime using the AniList API
 const SEARCH_ANIME_QUERY = `
   query ($search: String) {
@@ -97,13 +96,27 @@ function searchAnimeAndNews() {
           const articleTitle = article.name;
           const articleUrl = article.url;
           const articleDescription = article.description;
-                // Create and append the news article element
-      const newsItemDiv = document.createElement('div');
-      newsItemDiv.classList.add('news-result-item');
-      newsItemDiv.innerHTML = `
-        <h3><a href="${articleUrl}" target="_blank">${articleTitle}</a></h3>
-        <p>${articleDescription}</p>
-      `;
+          
+          // Create and append the news article element
+          const newsItemDiv = document.createElement('div');
+          newsItemDiv.classList.add('news-result-item');
+          
+          // Create the article title element as a hyperlink
+          const articleTitleElement = document.createElement('h3');
+          const articleLink = document.createElement('a');
+          articleLink.href = articleUrl;
+          articleLink.target = '_blank'; // Open the link in a new tab
+          articleLink.textContent = articleTitle;
+          articleTitleElement.appendChild(articleLink);
+      // Create the article description element
+      const articleDescriptionElement = document.createElement('p');
+      articleDescriptionElement.textContent = articleDescription;
+
+      // Append the article title and description elements to the news item div
+      newsItemDiv.appendChild(articleTitleElement);
+      newsItemDiv.appendChild(articleDescriptionElement);
+
+      // Append the news item div to the news results container
       newsResultsDiv.appendChild(newsItemDiv);
     });
   })
@@ -116,4 +129,4 @@ function searchAnimeAndNews() {
 const searchButton = document.querySelector('.search-button');
 if (searchButton) {
 searchButton.addEventListener('click', searchAnimeAndNews);
-}
+}          
